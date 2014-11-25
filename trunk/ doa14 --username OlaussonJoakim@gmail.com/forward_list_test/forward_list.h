@@ -31,17 +31,25 @@ private:
 public:
 	forward_list(){
 		head = nullptr;
-		
 	}
 
-	forward_list(){
+	bool is_empty(){ return head == nullptr; } //kollar om listan är tom
+
+	bool front(){
+		if (head->next != NULL)
+			return head->data;
 	}
 
-	bool is_empty(){ return head == nullptr; }
+	bool push_front(){
+		if (head->next != NULL){
+			return head.push_front();
+		}
+	}
 
 	forward_list(const forward_list& obj){
 
 	}
+	
 
 
 
@@ -57,7 +65,7 @@ public:
 		typedef std::forward_iterator_tag iterator_category;
 		typedef int difference_type;
 
-		iterator(pointer ptr) : ptr_(ptr){}//Constructor
+		iterator(pointer ptr) : ptr_(ptr){}
 		self_type operator++(){
 			self_type i = *this;
 			ptr_ = ptr_->next;
@@ -71,10 +79,15 @@ public:
 		bool operator!=(const self_type& rhs){ return ptr_ != rhs.ptr_; }
 	private:
 		pointer ptr_;
+	public:
+		iterator(){return }
+
+		virtual ~iterator(){}
+
 	};
+
+
 
 	iterator begin(){ return iterator(head); }
 	iterator end(){ return iterator(nullptr); }
 };
-
-
