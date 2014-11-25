@@ -23,7 +23,7 @@ public:
 	}
 
 	void Translate(string lang, string inputWord){
-		if (lang == "eng"){
+		if (lang == "swe"){
 			if (inputWord == "hej" || inputWord == "HEJ"){
 				this->outputWord = "hello";
 			}
@@ -40,7 +40,7 @@ public:
 				cout << "Ordet finns ej i databasen." << endl;
 			}
 
-		if (lang == "swe"){
+		if (lang == "eng"){
 			if (inputWord == "hello" || inputWord == "HELLO"){
 				this->outputWord = "hej";
 			}
