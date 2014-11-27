@@ -35,23 +35,61 @@ public:
 
 	bool is_empty(){ return head == nullptr; } //kollar om listan är tom
 
-	bool front(){
-		if (head->next != NULL)
-			return head->data;
-	}
-
-	bool push_front(){
-		if (head->next != NULL){
-			return head.push_front();
-		}
-	}
-
 	forward_list(const forward_list& obj){
 
 	}
 	
 
+	T pop_front(){
+		if (head->next != nullptr){
+			Node<T> *n = head->data;
+			temp = n;
+			head = head->next;
+			delete head;
+			return temp;
+		}
+		else{
+			Node<T> *n = head->data;
+			head = head->next;
+			temp = n;
+			return temp;
+		}
+	}
 
+	void front(){
+		if (head->next != nullptr){
+			return head;
+		}
+		else{
+			return NULL;
+		}
+	}
+
+	void push_front(T value){
+		Node <T> *n = new Node<T> (value);
+		if (head == nullptr)
+			head = n;
+	}
+
+	void clear(){
+		Node<T> *n = new Node<T> (NULL);
+		if (head != nullptr)
+			head = n;
+	}
+
+	void insert_after(){
+
+	}
+
+	void erase(){
+
+	}
+
+	void swap(<T list1, T list2){
+		Node <T> *n = head->next;
+
+
+	}
 
 	virtual ~forward_list(){
 	}

@@ -1,17 +1,14 @@
-﻿Build started 2014-11-25 11:09:34.
-     1>Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\forward_list_test\forward_list_test.vcxproj" on node 4 (Rebuild target(s)).
+﻿Build started 2014-11-27 11:36:56.
+     1>Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\forward_list_test\forward_list_test.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\forward_list_test.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt stdafx.cpp
-         stdafx.cpp
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\forward_list_test.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt unittest1.cpp
          unittest1.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.lib" /MACHINE:X86 /DLL Debug\stdafx.obj
          Debug\unittest1.obj
-            Creating library C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.lib and object C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.exp
          forward_list_test.vcxproj -> C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\forward_list_test.dll
-     1>Done Building Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\forward_list_test\forward_list_test.vcxproj" (Rebuild target(s)).
+     1>Done Building Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\forward_list_test\forward_list_test.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.43
+Time Elapsed 00:00:00.94

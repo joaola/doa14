@@ -17,17 +17,23 @@ namespace forward_list_test
 			Assert::AreEqual(true, fli.is_empty());
 
 		}
-		TEST_METHOD(TestForwardList_push_front_and_front){
+	TEST_METHOD(TestForwardList_push_front_and_front){
 			forward_list<int> fli;
-			Assert::AreEqual(false, true);
-			}/*
+			fli.push_front(10);
+			Assert::AreEqual(false, fli.is_empty());
 
-			TEST_METHOD(TestForwardList_iterator_begin_end){
-			Assert::AreEqual(false, true);
+		}
+
+		/*TEST_METHOD(TestForwardList_iterator_begin_end){
+			forward_list <int> fli;
+			Assert::AreEqual(false, fli.is_empty());
+			
 			}
 
 			TEST_METHOD(TestForwardList_pop_front){
-			Assert::AreEqual(false, true);
+				forward_list<int> fli;
+				Assert::AreEqual(true, false);
+			
 			}
 
 			TEST_METHOD(TestForwardList_size){
