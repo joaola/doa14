@@ -23,6 +23,12 @@ namespace forward_list_test
 			Assert::AreEqual(false, fli.is_empty());
 
 		}
+	TEST_METHOD(TestForwardList_swap){
+		forward_list <int> fli;
+		forward_list <int> fl1;
+		fli.swap(fl1);
+		Assert::AreEqual(false, fli.is_empty());
+	}
 
 		/*TEST_METHOD(TestForwardList_iterator_begin_end){
 			forward_list <int> fli;
