@@ -36,7 +36,11 @@ public:
 	bool is_empty(){ return head == nullptr; } //kollar om listan är tom
 
 	forward_list(const forward_list& obj){
+		forward_list<int>fl1;
+		fl1.push_front(10);
+		fl1.push_front(20);
 
+		forward_list<int>fl2(fl1);
 	}
 	
 
@@ -77,18 +81,29 @@ public:
 			head = n;
 	}
 
-	void insert_after(){
-
+	void insert_after(T value){
+		Node<T> *n = new Node<T>(value);
+		
 	}
 
 	void erase(){
-
+		
 	}
 
-	void swap(<T list1, T list2){
-		Node <T> *n = head->next;
+	void swap(forward_list &fl1){
+		auto temp = head;
+		head = fl1;
+		fl1.head = temp;
+	}
 
+	forward_list& operator = (forward_list& right_object){ //Copy-konstruktor
+		forward_list<int> fl1;
+		forward_list<int> fl2;
 
+		fl1.push_front(10);
+		fl1.push_front(20);
+
+		fl2 = fl1;
 	}
 
 	virtual ~forward_list(){
