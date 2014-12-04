@@ -83,7 +83,7 @@ int is_array_sorted(double a[], int length) { //komplexitet = O(n-1)
 }
 
 // Returns 1 if the array "a" of length "length" is sorted in ascending order
-int is_array_sorted_2(double a[], int length) { //komplexitet = O(n)
+int is_array_sorted_2(double a[], int length) { //komplexitet = O(n^2)
     double *copy = malloc(length * sizeof(double));
     memcpy(copy, a, length * sizeof(double));
     sort_array(copy, length);

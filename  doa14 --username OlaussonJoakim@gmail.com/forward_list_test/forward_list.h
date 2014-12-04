@@ -3,6 +3,8 @@
 //template<class INFO>
 
 #include<iterator>
+#include <exception>
+using namespace std;
 template <class T>
 struct Node{
 	T value;
@@ -33,7 +35,7 @@ public:
 		head = nullptr;
 	}
 
-	bool is_empty(){ return head == nullptr; } //kollar om listan är tom
+	bool is_empty(){ return head == nullptr; } //Kollar om listan är tom
 
 	forward_list(const forward_list& obj){
 		forward_list<int>fl1;
@@ -44,7 +46,7 @@ public:
 	}
 	
 
-	T pop_front(){
+	T pop_front(){ //Tag bort det första elementet i listan.
 		if (head->next != nullptr){
 			Node<T> *n = head->data;
 			temp = n;
@@ -60,39 +62,43 @@ public:
 		}
 	}
 
-	void front(){
-		if (head->next != nullptr){
-			return head;
+	T& front(){ 
+		if (head != nullptr){
+			return head->value;
 		}
 		else{
-			return NULL;
+			throw exception("Tom lista");
 		}
 	}
 
-	void push_front(T value){
+	void push_front(T value){ //Insättning av ett element i början av listan
 		Node <T> *n = new Node<T> (value);
 		if (head == nullptr)
 			head = n;
+
+
 	}
 
-	void clear(){
+	void clear(){ //Töm hela listan
 		Node<T> *n = new Node<T> (NULL);
 		if (head != nullptr)
 			head = n;
+
+			
 	}
 
-	void insert_after(T value){
+	void insert_after(T value){ //Sätt in ett element efter
 		Node<T> *n = new Node<T>(value);
 		
 	}
 
-	void erase(){
+	void erase_after(){ //Tag bort ett element efter
 		
 	}
 
-	void swap(forward_list &fl1){
+	void swap(forward_list &fl1){ //Byt plats på innehållet
 		auto temp = head;
-		head = fl1;
+		head = fl1.head;
 		fl1.head = temp;
 	}
 

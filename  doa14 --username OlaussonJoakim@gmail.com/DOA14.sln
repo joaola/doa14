@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "forward_list_test", "forwar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "komplexitetsteori", "komplexitetsteori\komplexitetsteori.vcxproj", "{D583BE98-AF1F-4287-92B1-0BBBC55F3848}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "forward_list", "forward_list\forward_list.vcxproj", "{A5161180-77AF-4F88-9AF7-FC1A55D7E680}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -39,6 +41,10 @@ Global
 		{D583BE98-AF1F-4287-92B1-0BBBC55F3848}.Debug|Win32.Build.0 = Debug|Win32
 		{D583BE98-AF1F-4287-92B1-0BBBC55F3848}.Release|Win32.ActiveCfg = Release|Win32
 		{D583BE98-AF1F-4287-92B1-0BBBC55F3848}.Release|Win32.Build.0 = Release|Win32
+		{A5161180-77AF-4F88-9AF7-FC1A55D7E680}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5161180-77AF-4F88-9AF7-FC1A55D7E680}.Debug|Win32.Build.0 = Debug|Win32
+		{A5161180-77AF-4F88-9AF7-FC1A55D7E680}.Release|Win32.ActiveCfg = Release|Win32
+		{A5161180-77AF-4F88-9AF7-FC1A55D7E680}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

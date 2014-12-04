@@ -20,14 +20,23 @@ namespace forward_list_test
 	TEST_METHOD(TestForwardList_push_front_and_front){
 			forward_list<int> fli;
 			fli.push_front(10);
-			Assert::AreEqual(false, fli.is_empty());
+			Assert::AreEqual(10, fli.front());
+			fli.push_front(20);
+			Assert::AreEqual(20, fli.front());
 
 		}
 	TEST_METHOD(TestForwardList_swap){
-		forward_list <int> fli;
-		forward_list <int> fl1;
-		fli.swap(fl1);
-		Assert::AreEqual(false, fli.is_empty());
+		forward_list <int> fli1;
+		forward_list <int> fli2;
+		
+		Assert::AreEqual(true, fli1.is_empty());
+
+		fli1.push_front(10);
+		fli1.push_front(20);
+
+		fli2.push_front(30);
+		fli1.swap(fli2);
+		Assert::AreEqual(20, fli2.front());
 	}
 
 		/*TEST_METHOD(TestForwardList_iterator_begin_end){
