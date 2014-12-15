@@ -2,19 +2,19 @@
 #include <deque>
 #include "string.h"
 #include <fstream>
+#include <sstream>
 using namespace std;
 namespace U31
 {
 	bool palindrome(string s){
 		deque<char> palindrome;
-		for (int i = 0; i < int(s.length()); i++){
+		/*for (int i = 0; i < int(s.length()); i++){
 			if (s[i] != ' ')
 				palindrome.push_back(s[i]);
-		}
+		}*/
 
 		while (!palindrome.empty()){
 			if (palindrome.back() != palindrome.front()){
-				cout << "Ej palindrom" << endl;
 				return false;
 			}
 			if (!palindrome.empty())
@@ -23,7 +23,6 @@ namespace U31
 				palindrome.pop_front();
 
 		}
-		cout << "Palindrom" << endl;
 		return true;
 
 	
@@ -40,7 +39,7 @@ namespace U31
 
 	void main_one(){
 		string s = "ana";
-		palindrome(s);
+		cout << palindrome(s) << endl;
 		cout << palindrome_recursive(s, 0, s.length() - 1) << endl;
 	}
 }
@@ -49,6 +48,11 @@ namespace U32{
 		string str, strRow;
 		ifstream fin;
 		fin.open("salary.txt");
+		
+		if (!fin.good()){
+			cout << "Gick ej att öppna" << endl;
+			return;
+		}
 	}
 }
 
