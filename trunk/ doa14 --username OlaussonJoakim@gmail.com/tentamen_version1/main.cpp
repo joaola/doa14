@@ -1,3 +1,6 @@
+#include "statistics.h"
+#include "WordCounter.h"
+
 #include <iostream>
 #include <deque>
 #include "string.h"
@@ -45,21 +48,28 @@ namespace U31
 }
 namespace U32{
 	void main_two(){
-		string str, strRow;
-		ifstream fin;
-		fin.open("salary.txt");
-		
-		if (!fin.good()){
-			cout << "Gick ej att öppna" << endl;
-			return;
-		}
+		statistics s1;
+		s1.clear();
+		s1.ReadFromFile("salary.txt");
+		cout << s1.calculate_mean() << endl;
+		cout << s1.calculate_median() << endl;
+
+	}
+}
+namespace U33{
+
+	void main_three(){
+		WordCounter w1;
+		w1.ReadFromFile("nils_holgersson.txt");
+		cout << w1.mostFrequentWord()<<endl;
 	}
 }
 
 int main(){
-
 	U31::main_one();
 	U32::main_two();
+	U33::main_three();
+	cout << endl;
 	system("PAUSE");
 
 	return 0;

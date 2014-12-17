@@ -1,4 +1,4 @@
-﻿Build started 2014-11-25 11:09:34.
+﻿Build started 2014-12-17 21:11:36.
      1>Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\ADT\ADT.vcxproj" on node 2 (Rebuild target(s)).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ADT.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
@@ -11,4 +11,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.06
+Time Elapsed 00:00:01.03

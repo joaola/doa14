@@ -67,6 +67,7 @@
     <ClCompile Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version1\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version1\WordCounter.h" />
     <ClInclude Include="statistics.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
