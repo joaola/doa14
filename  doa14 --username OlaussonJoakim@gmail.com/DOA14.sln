@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "forward_list", "forward_lis
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tentamen_version1", "tentamen_version1\tentamen_version1.vcxproj", "{3BEB1BCC-61B9-48EE-9309-F0FCFA2C5FB4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tentamen_version2", "tentamen_version2\tentamen_version2.vcxproj", "{EB954D02-B370-49B2-9334-9B4811DFD3B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -51,6 +53,10 @@ Global
 		{3BEB1BCC-61B9-48EE-9309-F0FCFA2C5FB4}.Debug|Win32.Build.0 = Debug|Win32
 		{3BEB1BCC-61B9-48EE-9309-F0FCFA2C5FB4}.Release|Win32.ActiveCfg = Release|Win32
 		{3BEB1BCC-61B9-48EE-9309-F0FCFA2C5FB4}.Release|Win32.Build.0 = Release|Win32
+		{EB954D02-B370-49B2-9334-9B4811DFD3B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB954D02-B370-49B2-9334-9B4811DFD3B7}.Debug|Win32.Build.0 = Debug|Win32
+		{EB954D02-B370-49B2-9334-9B4811DFD3B7}.Release|Win32.ActiveCfg = Release|Win32
+		{EB954D02-B370-49B2-9334-9B4811DFD3B7}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
