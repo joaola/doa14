@@ -4,6 +4,9 @@
 
 #include<iterator>
 #include <exception>
+#include <string>
+#include<sstream>
+#include <iostream>
 using namespace std;
 template <class T>
 struct Node{
@@ -77,20 +80,21 @@ public:
 	}
 
 	void clear(){ //Töm hela listan
-		Node<T> *n = new Node<T>(NULL);
-		if (head != nullptr)
-			head = n;
+		//Node<T> *n = new Node<T>(NULL);
+		while (!is_empty()){
+			pop_front();
+		}
 
 
 	}
 
-	string PrintList(){
+	string PrintList(){ //Skriv ut listan
 		ostringstream oss;
 		Node<T> *n = head;
 		if (n == nullptr)
 			return "";
 		while (n != nullptr){
-			oss << n - > value << endl;
+			oss << n -> value << endl;
 			n = n->next;
 		}
 		return oss.str();
@@ -104,14 +108,14 @@ public:
 			ptr = ptr->next;
 			i++;
 		}
-		node<T> *n = new node <T>(value);
+		Node<T> *n = new Node <T>(value);
 		n->next = ptr->next;
 		ptr->next = n;
 	}
 
 	void erase_after(int index){ //Tag bort ett element efter
-		node<T> *ptr = head;
-		node<T> *temp;
+		Node<T> *ptr = head;
+		Node<T> *temp;
 		int i = 0;
 		while (i != index){
 			ptr = ptr->next;
