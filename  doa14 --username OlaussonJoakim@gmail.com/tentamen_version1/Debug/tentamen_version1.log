@@ -1,5 +1,5 @@
-﻿Build started 2015-01-05 10:32:27.
-     1>Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\tentamen_version1\tentamen_version1.vcxproj" on node 4 (Rebuild target(s)).
+﻿Build started 2015-01-06 20:40:34.
+     1>Project "C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\tentamen_version1\tentamen_version1.vcxproj" on node 5 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\..\ doa14 --username OlaussonJoakim@gmail.com\tentamen_version1\main.cpp"
          main.cpp
@@ -10,4 +10,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.41
+Time Elapsed 00:00:01.42
