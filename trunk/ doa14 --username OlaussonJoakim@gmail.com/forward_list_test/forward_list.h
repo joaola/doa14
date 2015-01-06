@@ -17,7 +17,7 @@ struct Node{
 		next = nullptr;
 	}
 
-	Node(const T &t){
+	Node(T t){
 		value = t;
 		next = nullptr;
 	}
@@ -40,13 +40,13 @@ public:
 
 	bool is_empty(){ return head == nullptr; } //Kollar om listan är tom
 
-	forward_list(const forward_list& obj){
+	/*forward_list(const forward_list& obj){
 		forward_list<int>fl1;
 		fl1.push_front(10);
 		fl1.push_front(20);
 
 		forward_list<int>fl2(fl1);
-	}
+	}*/
 
 
 	void pop_front(){ //Tag bort det första elementet i listan.
@@ -133,19 +133,61 @@ public:
 		fl1.head = temp;
 	}
 
+	T& operator[](int index){
+		Node <T> *tempptr = this->head;
+		for (int i = 0; i < index; i++)
+		{
+			tempptr = tempptr->next;
+		}
+		return tempptr->value;
+	}
+
+	int length(){
+		int sum = 0;
+		Node <T> *tempptr = this->head;
+		while (tempptr!= nullptr){
+			tempptr = tempptr->next;
+			sum++;
+		}
+		return sum;
+	}
 
 
-	forward_list& operator = (forward_list& right_object){ //Copy-konstruktor
-		forward_list<int> fl1;
+	forward_list& operator = (forward_list& right_object) //Copy-konstruktor
+
+		{
+			this->clear();
+			Node<T> *n = right_object.head;
+			Node<T> *n2 = nullptr;
+			while (n != nullptr)
+			{
+				if (head == nullptr)
+				{
+					head = new Node<T>(n->value);
+					n2 = head;
+				}
+				else
+				{
+					n2->next = new Node<T>(n->value);
+					n2 = n2->next;
+				}
+				n = n->next;
+			}
+			return *this;
+		
+
+		/*forward_list<int> fl1;
 		forward_list<int> fl2;
 
 		fl1.push_front(10);
 		fl1.push_front(20);
 
 		fl2 = fl1;
-	}
+		}*/
 
-	//void iterator_begin_end
+		//void iterator_begin_end
+
+	}
 
 	virtual ~forward_list(){}
 
