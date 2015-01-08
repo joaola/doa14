@@ -2,20 +2,24 @@
 #pragma once
 class sumCounter
 {
-private: int temp;
-		 int result;
+private:
 public:
 
-	sumCounter()
-	{
+	sumCounter(){
 	}
 
-	int sum_rek(int n){
-
+	float sum_rek(int n){ // 3.1a)
+		int i = 1;
+		if (n <= i){
+			return (1/sqrt(float(n)));
+		}
+		return (1/sqrt((float)n) + sum_rek(n-1));
 	}
-	int sum_it(int n){
-		for (int i = 0; n < i; i++){
-			result += (1 / (sqrt(float(i))));
+
+	float sum_it(int n){ //3.1b)
+		float result = 0;
+		for (int i = 1; i <= n; i++){
+			result += (1 / sqrt(float(i)));
 		}
 		
 		return result;
