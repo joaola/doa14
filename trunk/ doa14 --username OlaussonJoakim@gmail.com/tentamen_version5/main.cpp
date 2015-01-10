@@ -2,8 +2,11 @@
 
 #include <math.h>
 #include <iostream>
-
+#include <deque>
+#include <queue>
 using namespace std;
+
+
 
 namespace U31{
 	int fakRek1(int n){ //Fakultetsfunktion
@@ -35,15 +38,37 @@ namespace U31{
 }
 namespace U32{
 	void main_two(){
-		//unordered_map<string, int> i;
-		//ReadFromFile("ip_two.txt");
+		ip_search ip;
+		ip.ReadFromFile("ip_two.txt");
+		cout << ip.Antal("119.128.105.153") << endl;
+
+
+	}
+
+}
+
+namespace U33{
+	void main_three(){
+		priority_queue<data_pq>ips;
+
+		ip_search ip;
+		ip.ReadFromFile("ip_two.txt");
+		//cout << ip.Antal("119.128.105.153") << endl;
+		ip.copyTo(ips);
+		
+		for (int i= 0; i < 10; i++)
+		{
+			cout << ips.top().ip << " " <<ips.top().antal<< endl;
+			ips.pop();
+		}
 		
 	}
 }
 
-
 int main(){
-	U31::main_one();
+	//U31::main_one();
+	//U32::main_two();
+	U33::main_three();
 	system("PAUSE");
 	return 0;
 }

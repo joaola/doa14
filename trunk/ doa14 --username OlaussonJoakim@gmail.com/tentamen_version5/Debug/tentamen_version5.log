@@ -1,28 +1,2 @@
 ﻿  main.cpp
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(12): error C2061: syntax error : identifier 'unordered_map'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(17): error C2992: 'Node' : invalid or missing template parameter list
-          c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(14) : see declaration of 'Node'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(22): error C2143: syntax error : missing ';' before '<'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(22): error C2238: unexpected token(s) preceding ';'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(31): error C2061: syntax error : identifier 'string'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(32): error C2065: 'string' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(32): error C2146: syntax error : missing ';' before identifier 'str'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(32): error C2065: 'str' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(32): error C2065: 'strRow' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(33): error C2065: 'ifstream' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(33): error C2146: syntax error : missing ';' before identifier 'fin'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(33): error C2065: 'fin' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(34): error C2065: 'fin' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(34): error C2228: left of '.open' must have class/struct/union
-          type is 'unknown-type'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(34): error C2065: 'fileName' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(35): error C2065: 'fin' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(35): error C2228: left of '.good' must have class/struct/union
-          type is 'unknown-type'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(36): error C2065: 'cout' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(36): error C2065: 'endl' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(40): error C2065: 'fin' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(40): error C2228: left of '.eof' must have class/struct/union
-          type is 'unknown-type'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version5\ip_search.h(40): fatal error C1903: unable to recover from previous error(s); stopping compilation
+  tentamen_version5.vcxproj -> C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Debug\tentamen_version5.exe

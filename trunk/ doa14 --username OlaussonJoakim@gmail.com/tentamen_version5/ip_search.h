@@ -7,59 +7,33 @@
 #include <string>
 #include <algorithm>
 #include <array>
-/*template <class Key,
-	class T, 
-		class Hash = hash<Key>,
-			class Pred = equal_to<Key>,
-				class Alloc = allocator <pair<const key, T>>>*/
-
-class Data{
-	string ipNr;
-	int antal_IP;
-	int antal_Uppkopplingar;
-	
-	public Data(){
-		this->ipNr = "";
-		this->antal_IP = 0;
-		int antal_Uppkopplingar = 0;
-	}
-	public Data(string ipNr, int antal_IP, int antal_Uppkopplingar){
-		string ipNr = ipNr;
-		this->antal_IP = antal_IP;
-		this->antal_Uppkopplingar = antal_Uppkopplingar;
-
+#include <deque>
+#include<queue>
+using namespace std;
+struct data_pq{
+	string ip;
+	int antal;
+	data_pq(string ip, int antal){
+		this->ip = ip;
+		this->antal = antal;
 	}
 
-	inline operator Data=(Data a){
-		this->ipNr = a.IpNr;
-		this->antal_IP = a.antal_IP;
-		this->antal_Uppkopplingar = a.antal_Uppkopplingar;
+	friend bool operator <(const data_pq& left, const data_pq& right)
+	{
+		return left.antal < right.antal;
+	}
+
+	/*inline data_pq operator=(data_pq a) {
+		this->ip = a.ip;
+		this->n = a.n;
 		return a;
-	}
-
-	public override bool Equals(object obj)
-	{
-		return v == ((Data)obj).ipNr;
-	}
-
-	public override int GetHashCode()
-	{
-		return ipNr.GetHashCode();
-	}
-
-	public override string ToString()
-	{
-		return "" + ipNr;
-	}
+	}*/
 };
-template <unordered_map>
 class ip_search
 {
 private:
-	Data dat;
-	vector<string>key;
-	vector<int>value;
-	unordered_map<string, int>ipList;
+	//std::string a;
+	std::unordered_map <std::string, int> ipList;
 public:
 
 	ip_search()
@@ -67,29 +41,45 @@ public:
 
 	}
 
-	void ReadFromFile(string fileName){
-		string str, strRow;
-		ifstream fin;
+	int Antal(std::string a){
+		return ipList[a];
+	}
+
+	void ReadFromFile(std::string fileName){
+		std::string str, strRow;
+		std::ifstream fin;
 		fin.open(fileName);
 		if (!fin.good()){
-			cout << "Could not open file!" << endl;
+			std::cout << "Could not open file!" << std::endl;
 			return;
 		}
 
 		while (!fin.eof())
 		{
-			string ip = "";
-			fin >> ip;
-			if (ipList(ip)){
-				this->ipList[key]++
-			}
+			//std::istringstream iss(str);
+			std::string ip1,ip2 = "";
+			fin >> ip1>>ip2;
+			ipList[ip2]++;
+			//cout << ip1 <<" "<< ip2 << endl;
+			//system("PAUSE");
 		}
-
-		cout << "Done!" << endl;
+		std::cout << "Done!" << std::endl;
 	}
 
+	void copyTo(priority_queue<data_pq> &ips){
+
+		for (auto& x : ipList) {
+			data_pq a(x.first, x.second);
+
+			//std::cout << x.first << ": " << x.second << std::endl;
+			ips.push(a);
+		}
+			
+		
+	}
 	~ip_search()
 	{
 	}
 };
+
 
