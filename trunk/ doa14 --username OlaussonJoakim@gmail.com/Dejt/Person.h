@@ -26,6 +26,14 @@ public:
 		this->name = name;
 	}
 
+	bool operator == (Person& right){
+		if (name == right.name){
+			return true;
+		}
+		else
+			return false;
+	}
+
 	void setName(string name)
 	{
 		this->name = name;
