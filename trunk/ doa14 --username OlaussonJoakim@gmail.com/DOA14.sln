@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dejt", "Dejt\Dejt.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tentamen_version5", "tentamen_version5\tentamen_version5.vcxproj", "{BB006B8F-2936-4BCF-A473-C2E6247F15F3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tentamen_version3", "tentamen_version3\tentamen_version3.vcxproj", "{9BDE8FCE-B6A6-4D46-90B8-D279654BE339}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -69,6 +71,10 @@ Global
 		{BB006B8F-2936-4BCF-A473-C2E6247F15F3}.Debug|Win32.Build.0 = Debug|Win32
 		{BB006B8F-2936-4BCF-A473-C2E6247F15F3}.Release|Win32.ActiveCfg = Release|Win32
 		{BB006B8F-2936-4BCF-A473-C2E6247F15F3}.Release|Win32.Build.0 = Release|Win32
+		{9BDE8FCE-B6A6-4D46-90B8-D279654BE339}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9BDE8FCE-B6A6-4D46-90B8-D279654BE339}.Debug|Win32.Build.0 = Debug|Win32
+		{9BDE8FCE-B6A6-4D46-90B8-D279654BE339}.Release|Win32.ActiveCfg = Release|Win32
+		{9BDE8FCE-B6A6-4D46-90B8-D279654BE339}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
