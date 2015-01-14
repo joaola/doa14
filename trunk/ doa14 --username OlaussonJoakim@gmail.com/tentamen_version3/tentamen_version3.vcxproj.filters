@@ -19,4 +19,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version3\observatory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version3\testfil-10.txt" />
+  </ItemGroup>
 </Project>

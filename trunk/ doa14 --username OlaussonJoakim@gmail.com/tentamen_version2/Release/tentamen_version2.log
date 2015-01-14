@@ -1,0 +1,7 @@
+﻿  main.cpp
+c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version2\statistics.h(71): warning C4244: 'argument' : conversion from '__int64' to 'unsigned int', possible loss of data
+c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version2\statistics.h(72): warning C4244: 'argument' : conversion from '__int64' to 'unsigned int', possible loss of data
+c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\tentamen_version2\statistics.h(90): warning C4244: 'return' : conversion from 'int' to 'float', possible loss of data
+  Generating code
+  Finished generating code
+  tentamen_version2.vcxproj -> C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Release\tentamen_version2.exe

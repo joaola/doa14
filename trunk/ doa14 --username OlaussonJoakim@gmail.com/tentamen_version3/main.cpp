@@ -1,5 +1,6 @@
 #include "math.h"
 #include <iostream>
+#include "observatory.h"
 using namespace std;
 
 namespace U31{
@@ -40,11 +41,16 @@ namespace U31{
 }
 
 namespace U32{
-
+	void main_two(){ // 3.2
+		observatory o;
+		o.ReadFromFile("testfil-10.txt");
+		o.Print();
+	}
 }
 
 int main(){
 	U31::main_one();
+	U32::main_two();
 	system("PAUSE");
 	return 0;
 }
