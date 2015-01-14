@@ -66,6 +66,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version3\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version3\observatory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version3\testfil-10.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

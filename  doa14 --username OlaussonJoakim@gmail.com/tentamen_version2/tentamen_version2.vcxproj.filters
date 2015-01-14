@@ -26,8 +26,12 @@
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version2\statistics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version2\wordCounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version2\salary.txt" />
+    <Text Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\tentamen_version2\nils_holgersson.txt" />
   </ItemGroup>
 </Project>

@@ -46,7 +46,7 @@ public:
 	}
 
 	void ReadFromFile(std::string fileName){
-		std::string str, strRow;
+		//std::string str, strRow;
 		std::ifstream fin;
 		fin.open(fileName);
 		if (!fin.good()){
@@ -74,7 +74,6 @@ public:
 			//std::cout << x.first << ": " << x.second << std::endl;
 			ips.push(a);
 		}
-			
 		
 	}
 	~ip_search()

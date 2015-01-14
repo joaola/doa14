@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include "math.h"
 #pragma once
 using namespace std;
 struct data{
@@ -42,12 +43,12 @@ public:
 		}
 	}
 
-	void print(){
+	/*void print(){
 		for (int i = 0; i < 1000; i++){
 			cout << "Totalsumman: " << this->salary[i].sum << endl;
 			cout << "Antal personer: " << this->salary[i].n << endl;
 		}
-	}
+	}*/
 
 	void ReadFromFile(string fileName){
 		ifstream fin;
@@ -64,7 +65,7 @@ public:
 			long long salary = 0;
 			//int index = 0;
 			iss >> salary;
-			cout << salary;
+			//cout << salary;
 			if (salary <= 1000000 && salary >= 0){ //Läs in lönen som är mellan 0-1000000
 				long long index = ((long long)(salary / 1000));
 				this->salary[index].sum+=salary; //Lön
@@ -80,8 +81,13 @@ public:
 	}
 
 	float calculate_mean(){
-
-		return 0;
+		long long sum = 0;
+		int divider = 0;
+		for (int i = 0; i <= 1000; i++){
+			sum += (i*this->salary[i].sum);
+			divider += this->salary[i].n;
+		}
+		return((int)((sum / divider)));
 	}
 
 	int percentile(int procent){
