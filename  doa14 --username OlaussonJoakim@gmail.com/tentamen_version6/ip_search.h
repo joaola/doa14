@@ -71,7 +71,6 @@ public:
 			}
 		}
 
-
 	}
 
 	void copyTo(priority_queue<data_pq> &ips){
