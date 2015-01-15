@@ -67,8 +67,8 @@ namespace U33{
 
 int main(){
 	//U31::main_one();
-	//U32::main_two();
-	U33::main_three();
+	U32::main_two();
+	//U33::main_three();
 	system("PAUSE");
 	return 0;
 }
