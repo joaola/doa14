@@ -62,6 +62,10 @@ public:
 		this->interests.push_front(i);
 	}
 
+	forward_list<string> getInterest(){
+		return interests;
+	}
+
 	~Person()
 	{
 	}
