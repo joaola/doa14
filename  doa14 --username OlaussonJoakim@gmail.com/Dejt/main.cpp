@@ -11,29 +11,6 @@
 
 using namespace std;
 
-void ReadFromFile(string fileName, forward_list<Person>& list){
-	string str, strRow;
-	ifstream fin;
-	fin.open(fileName);
-	if (!fin.good()){
-		cout << "Gick ej att öppna" << endl;
-		return;
-	}
-	while (getline(fin, strRow)){
-		istringstream iss(strRow);
-		string word;
-		iss >> word;
-		Person p1 (word);
-		while (iss>>word){
-			p1.addInterest(word);
-		}
-
-		list.push_front(p1);
-	}
-
-	fin.close();
-}
-
 void mainTest(){
 	
 }
@@ -41,17 +18,22 @@ void mainTest(){
 int main(){
 	forward_list<Person>pojkLista;
 	forward_list<Person>flickLista;
-	forward_list<forward_list<Person>>ListOfPersons;
+	forward_list<Person>personLista;
+	
 	//mainTest();
-	ReadFromFile("pojkfil.txt", pojkLista);
-	ReadFromFile("flickfil.txt", flickLista);
+	PersonList pl;
+	pl.ReadFromFile("pojkfil.txt", pojkLista);
+	pl.ReadFromFile("flickfil.txt", flickLista);
 
-	for (int i = 0; i < pojkLista.length(); i++)
+	pl.addToPeopleList(pojkLista, flickLista, personLista);
+
+
+	for (int i = 0; i < pojkLista.length(); i++) //Printa pojklista
 	{
 		pojkLista[i].print();
 	}
 
-	for (int i = 0; i < flickLista.length(); i++){
+	for (int i = 0; i < flickLista.length(); i++){ //Printa flicklista
 		flickLista[i].print();
 	}
 
