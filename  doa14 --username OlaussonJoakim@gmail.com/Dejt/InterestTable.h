@@ -8,7 +8,7 @@
 #include "../forward_list_test/forward_list.h"
 using namespace std;
 
-class InterestTable : public forward_list<string>
+class InterestTable //: public forward_list<string>
 {
 private:
 	forward_list<string>interests;
