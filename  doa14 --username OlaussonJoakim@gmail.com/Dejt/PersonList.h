@@ -9,7 +9,7 @@ using namespace std;
 class PersonList
 {
 public:
-	forward_list<forward_list<Person>>ListOfPersons; //Lista med alla personer
+	//forward_list<forward_list<Person>>ListOfPersons; //Lista med alla personer
 	forward_list<string>pojkLista;
 	forward_list<string>flickLista;
 
