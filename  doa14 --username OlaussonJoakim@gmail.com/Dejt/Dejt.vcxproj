@@ -82,11 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Couple.h" />
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\CouplesList.h" />
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Dating.h" />
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\InterestTable.h" />
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Person.h" />
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\PersonList.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\AppData\Roaming\Skype\My Skype Received Files\flickfil.txt" />
