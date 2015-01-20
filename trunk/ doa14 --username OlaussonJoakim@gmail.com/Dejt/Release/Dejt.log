@@ -1,35 +1,4 @@
 ﻿  main.cpp
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(20): error C2065: 'Person' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(20): error C2923: 'forward_list' : 'Person' is not a valid template type argument for parameter 'T'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(30): error C2065: 'Person' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(30): error C2923: 'forward_list' : 'Person' is not a valid template type argument for parameter 'T'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(21): error C2662: 'int forward_list<T>::length(void)' : cannot convert 'this' pointer from 'forward_list' to 'forward_list<T> &'
-          Reason: cannot convert from 'forward_list' to 'forward_list<T>'
-          Conversion requires a second user-defined-conversion operator or constructor
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(22): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'forward_list' (or there is no acceptable conversion)
-          c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\../forward_list_test/forward_list.h(136): could be 'T &forward_list<T>::operator [](int)'
-          while trying to match the argument list '(forward_list, int)'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(22): error C2662: 'void forward_list<T>::push_front(T)' : cannot convert 'this' pointer from 'forward_list' to 'forward_list<T> &'
-          Reason: cannot convert from 'forward_list' to 'forward_list<T>'
-          Conversion requires a second user-defined-conversion operator or constructor
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(25): error C2662: 'int forward_list<T>::length(void)' : cannot convert 'this' pointer from 'forward_list' to 'forward_list<T> &'
-          Reason: cannot convert from 'forward_list' to 'forward_list<T>'
-          Conversion requires a second user-defined-conversion operator or constructor
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(26): error C2678: binary '[' : no operator found which takes a left-hand operand of type 'forward_list' (or there is no acceptable conversion)
-          c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\../forward_list_test/forward_list.h(136): could be 'T &forward_list<T>::operator [](int)'
-          while trying to match the argument list '(forward_list, int)'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(26): error C2662: 'void forward_list<T>::push_front(T)' : cannot convert 'this' pointer from 'forward_list' to 'forward_list<T> &'
-          Reason: cannot convert from 'forward_list' to 'forward_list<T>'
-          Conversion requires a second user-defined-conversion operator or constructor
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(42): error C2065: 'Person' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(42): error C2146: syntax error : missing ';' before identifier 'p1'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(42): error C3861: 'p1': identifier not found
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(44): error C2065: 'p1' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(44): error C2228: left of '.addInterest' must have class/struct/union
-          type is 'unknown-type'
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\PersonList.h(47): error C2065: 'p1' : undeclared identifier
-c:\users\joakim\desktop\ doa14 --username olaussonjoakim@gmail.com\dejt\Couple.h(8): error C2059: syntax error : '{'
-..\..\ doa14 --username OlaussonJoakim@gmail.com\Dejt\main.cpp(27): error C2664: 'void PersonList::ReadFromFile(std::string,forward_list &)' : cannot convert argument 2 from 'forward_list<Person>' to 'forward_list &'
-..\..\ doa14 --username OlaussonJoakim@gmail.com\Dejt\main.cpp(28): error C2664: 'void PersonList::ReadFromFile(std::string,forward_list &)' : cannot convert argument 2 from 'forward_list<Person>' to 'forward_list &'
-..\..\ doa14 --username OlaussonJoakim@gmail.com\Dejt\main.cpp(30): error C2664: 'void PersonList::addToPeopleList(forward_list,forward_list,forward_list)' : cannot convert argument 1 from 'forward_list<Person>' to 'forward_list'
-          No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  Generating code
+  Finished generating code
+  Dejt.vcxproj -> C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Release\Dejt.exe

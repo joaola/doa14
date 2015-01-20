@@ -10,14 +10,14 @@ class PersonList
 {
 public:
 	//forward_list<forward_list<Person>>ListOfPersons; //Lista med alla personer
-	forward_list<string>pojkLista;
-	forward_list<string>flickLista;
+	forward_list<Person>pojkLista;
+	forward_list<Person>flickLista;
 
 	PersonList()
 	{
 	}
 
-	void addToPeopleList(forward_list<Person> girlList, forward_list<Person>boyList, forward_list<Person> peopleList){
+	/*void addToPeopleList(forward_list<Person> girlList, forward_list<Person>boyList, forward_list<Person> peopleList){
 		for (int i = 0; i < girlList.length(); i++){
 			peopleList.push_front(girlList[i]);
 		}
@@ -25,7 +25,7 @@ public:
 		for (int i = 0; i < boyList.length(); i++){
 			peopleList.push_front(boyList[i]);
 		}
-	}
+	}*/
 
 	void ReadFromFile(string fileName, forward_list<Person>& list){
 		string str, strRow;

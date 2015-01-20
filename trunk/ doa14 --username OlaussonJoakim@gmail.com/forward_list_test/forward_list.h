@@ -40,15 +40,6 @@ public:
 
 	bool is_empty(){ return head == nullptr; } //Kollar om listan är tom
 
-	/*forward_list(const forward_list& obj){
-		forward_list<int>fl1;
-		fl1.push_front(10);
-		fl1.push_front(20);
-
-		forward_list<int>fl2(fl1);
-	}*/
-
-
 	void pop_front(){ //Tag bort det första elementet i listan.
 		if (head != nullptr){
 			Node<T> *temp = head;
@@ -174,18 +165,6 @@ public:
 				n = n->next;
 			}
 			return *this;
-		
-
-		/*forward_list<int> fl1;
-		forward_list<int> fl2;
-
-		fl1.push_front(10);
-		fl1.push_front(20);
-
-		fl2 = fl1;
-		}*/
-
-		//void iterator_begin_end
 
 	}
 
