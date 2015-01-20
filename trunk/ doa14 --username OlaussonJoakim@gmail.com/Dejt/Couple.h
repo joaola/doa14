@@ -1,10 +1,13 @@
 #pragma once
+
+#include "../forward_list_test/forward_list.h"
+
 #include "Person.h"
 using namespace std;
-class Couple //: public Person
+class Couple : 
 {
 private:
-public:
+public: forward_list<Person> couples;
 
 	Couple()
 	{
@@ -26,16 +29,20 @@ public:
 	void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
 		Person girl;
 		Person boy;
-		Person couples;
 
 		for (int i = 0; i < girlList.length(); i++){ // fortsätt med denna funktion senare
 			girl = girlList[i];
 
 			for (int j = 0; j < boyList.length(); j++){
-				boy = boyList[j];
+				if (compareInterests(boyList[j], girlList[i]) >= 4){
+					boy = boyList[j];
+				}
 			}
-
+			couples.push_front(boy);
+			coupleList.push_front(couples);
+			//Ska ta bort matchande pojke och flicka från vardera lista
 		}
+	
 	}
 
 	~Couple()
