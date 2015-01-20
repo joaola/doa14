@@ -4,8 +4,6 @@
 #include <sstream>
 
 #include "InterestTable.h"
-#include "Couple.h"
-#include "CouplesList.h"
 #include "../forward_list_test/forward_list.h"
 using namespace std;
 class Person
