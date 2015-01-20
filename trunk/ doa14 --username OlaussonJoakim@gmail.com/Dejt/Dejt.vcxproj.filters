@@ -20,12 +20,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\PersonList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\CouplesList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Couple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -33,9 +27,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\InterestTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Dating.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
