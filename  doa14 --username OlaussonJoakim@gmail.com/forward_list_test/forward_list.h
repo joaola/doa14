@@ -85,7 +85,7 @@ public:
 		if (n == nullptr)
 			return "";
 		while (n != nullptr){
-			oss << n -> value << endl;
+			oss << n->value << endl;
 			n = n->next;
 		}
 		return oss.str();
@@ -115,6 +115,32 @@ public:
 		temp = ptr->next;
 		ptr->next = temp->next;
 		delete temp;
+	}
+
+	int before(T value){ //Returnerar index
+		Node<T>*ptr = head;
+		int sum = 0;
+		while (!(ptr->next->value == value)||ptr != NULL){
+			ptr->next;
+			sum++;
+		}
+		return sum;
+	}
+
+	void remove(T value){
+		if (!is_empty())
+		{
+			Node <T>*ptr = head;
+
+			if (value == head->value){
+				pop_front();
+			}
+			else {
+				int i = before(value);
+				erase_after(i);
+			}
+		}
+
 	}
 
 	void swap(forward_list &fl1){ //Byt plats på innehållet

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../forward_list_test/forward_list.h"
-
 #include "Person.h"
 using namespace std;
 class Couple
@@ -18,7 +16,7 @@ public: forward_list<Person> couples;
 			int sameInterests = 0;
 			for (int i = 0; i < girl.getInterest().length(); i++){
 				for (int j = 0; j < boy.getInterest().length(); j++){
-					if (girl.getInterest()[i] == boy.getInterest()[i]){
+					if (girl.getInterest()[i] == boy.getInterest()[j]){
 						sameInterests++;
 					}
 
@@ -42,6 +40,8 @@ public: forward_list<Person> couples;
 				couples.push_front(boy);
 				coupleList.push_front(couples);
 				//Ska ta bort matchande pojke och flicka från vardera lista
+				girlList.remove(girl);
+				boyList.remove(boy);
 			}
 
 		}
