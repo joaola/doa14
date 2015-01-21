@@ -1,8 +1,6 @@
-//#include "Couple.h"
-//#include "PersonList.h"
 #include "InterestTable.h"
 #include "Person.h"
-#include "../forward_list_test/forward_list.h"
+//#include "Couple.h"
 
 #include "string.h"
 #include <fstream>
@@ -10,6 +8,41 @@
 #include <sstream>
 
 using namespace std;
+
+int compareInterests(Person girl, Person boy){
+	int sameInterests = 0;
+	for (int i = 0; i < girl.getInterest().length(); i++){
+		for (int j = 0; j < boy.getInterest().length(); j++){
+			if (girl.getInterest()[i] == boy.getInterest()[j]){
+				sameInterests++;
+			}
+
+		}
+	}
+	return sameInterests;
+}
+
+void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
+	Person girl;
+	Person boy;
+	forward_list<Person> couples;
+
+	for (int i = 0; i < girlList.length(); i++){ // fortsätt med denna funktion senare
+		girl = girlList[i];
+
+		for (int j = 0; j < boyList.length(); j++){
+			if (compareInterests(boyList[j], girlList[i]) >= 4){
+				boy = boyList[j];
+			}
+		}
+		couples.push_front(boy);
+		coupleList.push_front(couples);
+		//Ska ta bort matchande pojke och flicka från vardera lista
+		girlList.remove(girl);
+		boyList.remove(boy);
+	}
+
+}
 
 void ReadFromFile(string fileName, forward_list<Person>& list){
 	string str, strRow;
@@ -44,36 +77,35 @@ peopleList.push_front(boyList[i]);
 }
 }
 
-void mainTest(){
-	
+void mainTest(){	
 }
 
 int main(){
+	//4st forward lists
 	forward_list<Person>pojkLista;
 	forward_list<Person>flickLista;
 	forward_list<Person>personList;
 	forward_list<forward_list<Person>> parLista;
+
+	//Läs filer
 	ReadFromFile("pojkfil.txt", pojkLista);
 	ReadFromFile("flickfil.txt", flickLista);
 
+	//Lägg till info från flick- och pojklistan till personlistan
 	addToPeopleList(flickLista, pojkLista, personList);
+	
+	//Skapa par
+	//Couple c;
+	createCouple(flickLista, pojkLista, parLista);
+	//Printa personlistan
+	for (int i = 0; i < parLista.length(); i++){
+		parLista[i].PrintList();
+	}
+	//parLista.PrintList();
 
-	//pl.addToPeopleList(pojkLista, flickLista, personList);
-
-
-	for (int i = 0; i < personList.length(); i++) //Printa pojklistan
+	/*for (int i = 0; i < personList.length(); i++)
 	{
 		personList[i].print();
-	}
-
-	//for (int i = 0; i < flickLista.length(); i++){ //Printa flicklistan
-	//	flickLista[i].print();
-	//}
-
-	//c.createCouple(pojkLista,flickLista, parLista);
-	//parLista.PrintList();
-	/*for (int i = 0; i < flickLista.length(); i++){ //Printa parlistan
-		parLista[i].print();
 	}*/
 
 	system("PAUSE");
