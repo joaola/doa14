@@ -1,6 +1,5 @@
 #include "InterestTable.h"
 #include "Person.h"
-//#include "Couple.h"
 
 #include "string.h"
 #include <fstream>
@@ -9,6 +8,7 @@
 
 using namespace std;
 
+//Jämför flickors intressen med pojkars intressen
 int compareInterests(Person girl, Person boy){
 	int sameInterests = 0;
 	for (int i = 0; i < girl.getInterest().length(); i++){
@@ -22,38 +22,43 @@ int compareInterests(Person girl, Person boy){
 	return sameInterests;
 }
 
+//Skapar par
 void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
 	Person girl;
 	Person boy;
 	forward_list<Person> couples;
 
-	for (int i = 0; i < girlList.length(); i++){ // fortsätt med denna funktion senare
+	//Loopa flicklistan och pojklistan för att kunna jämföra intressen
+	for (int i = 0; i < girlList.length(); i++){
 		girl = girlList[i];
-
 		for (int j = 0; j < boyList.length(); j++){
-			if (compareInterests(boyList[j], girlList[i]) >= 4){
-				boy = boyList[j];
+			boy = boyList[j];
+			//Få fram match
+			int minMutualInterest = 4;
+			int matchValue = compareInterests(boy, girl);
+			if (matchValue >= minMutualInterest){ 
+				couples.push_front(boy);
+				couples.push_front(girl);
+				coupleList.push_front(couples);
+				girlList.remove(girl);
+				boyList.remove(boy);
+
 			}
 		}
-		couples.push_front(boy);
-		coupleList.push_front(couples);
-		//Ska ta bort matchande pojke och flicka från vardera lista
-		girlList.remove(girl);
-		boyList.remove(boy);
 	}
-
 }
 
+//Läser in filerna i en forward_list
 void ReadFromFile(string fileName, forward_list<Person>& list){
-	string str, strRow;
+	string str;
 	ifstream fin;
 	fin.open(fileName);
 	if (!fin.good()){
 		cout << "Gick ej att öppna" << endl;
 		return;
 	}
-	while (getline(fin, strRow)){
-		istringstream iss(strRow);
+	while (getline(fin, str)){
+		istringstream iss(str);
 		string word;
 		iss >> word;
 		Person p1(word);
@@ -67,6 +72,7 @@ void ReadFromFile(string fileName, forward_list<Person>& list){
 	fin.close();
 }
 
+//Lägger till personer till personlistan
 void addToPeopleList(forward_list<Person> girlList, forward_list<Person>boyList, forward_list<Person>& peopleList){
 for (int i = 0; i < girlList.length(); i++){
 peopleList.push_front(girlList[i]);
@@ -77,6 +83,7 @@ peopleList.push_front(boyList[i]);
 }
 }
 
+//Test main-funktion
 void mainTest(){	
 }
 
@@ -95,13 +102,11 @@ int main(){
 	addToPeopleList(flickLista, pojkLista, personList);
 	
 	//Skapa par
-	//Couple c;
 	createCouple(flickLista, pojkLista, parLista);
 	//Printa personlistan
-	for (int i = 0; i < parLista.length(); i++){
+	/*for (int i = 0; i < parLista.length(); i++){
 		parLista[i].PrintList();
-	}
-	//parLista.PrintList();
+	}*/
 
 	/*for (int i = 0; i < personList.length(); i++)
 	{

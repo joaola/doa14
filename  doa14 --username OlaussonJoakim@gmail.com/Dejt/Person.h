@@ -26,6 +26,7 @@ public:
 		this->name = name;
 	}
 
+	//Operatoröverlagring ==
 	bool operator == (Person& right){
 		if (name == right.name){
 			return true;
@@ -33,7 +34,7 @@ public:
 		else
 			return false;
 	}
-
+	//Operatoröverlagring <<
 	friend ostream& operator<<(ostream& os, Person& p)
 	{
 		os << p.name<<p.interests.PrintList();
