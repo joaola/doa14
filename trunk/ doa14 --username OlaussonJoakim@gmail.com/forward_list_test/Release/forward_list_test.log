@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  unittest1.cpp
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+     Creating library C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Release\forward_list_test.lib and object C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Release\forward_list_test.exp
+  Generating code
+  Finished generating code
+  forward_list_test.vcxproj -> C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\Release\forward_list_test.dll

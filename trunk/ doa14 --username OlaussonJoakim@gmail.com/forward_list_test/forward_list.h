@@ -45,7 +45,7 @@ public:
 			Node<T> *temp = head;
 			head = head->next;
 			delete temp;
-			}
+		}
 	}
 
 	T& front(){
@@ -79,17 +79,33 @@ public:
 
 	}
 
-	string PrintList(){ //Skriv ut listan
-		ostringstream oss;
+	void PrintList(){ //Skriv ut listan
+
+		Node <T> *ptr = head;
+		while (ptr != nullptr)
+		{
+			if (ptr == head){
+				cout << "{";
+			}
+			cout << ptr->value;
+			if (ptr->next == nullptr)
+			{
+				cout << "}";
+			}
+			else
+				cout << ",";
+			ptr = ptr->next;
+		}
+	
+		/*ostringstream oss;
 		Node<T> *n = head;
 		if (n == nullptr)
 			return "";
 		while (n != nullptr){
 			oss << n->value << endl;
-			n = n->next;
 		}
-		return oss.str();
-	}
+		return oss.str();*/
+		}
 
 	void insert_after(int index, T value){ //Sätt in ett element efter
 		Node<T> *ptr = head;
@@ -117,31 +133,57 @@ public:
 		delete temp;
 	}
 
-	int before(T value){ //Returnerar index
+	T before(T val){ //Returnerar index
 		Node<T>*ptr = head;
-		int sum = 0;
-		while (!(ptr->next->value == value)||ptr != NULL){
+		//int sum = 0;
+		while (!(ptr->next->value == val) || ptr != NULL){
 			ptr->next;
-			sum++;
+			//sum++;
 		}
-		return sum;
+		return ptr;//sum;
 	}
 
-	void remove(T value){
-		if (!is_empty())
+	void remove(T value)
+	{
+		Node<T> *prePtr = nullptr;
+		Node<T> *ptr = head;
+		while (ptr != nullptr)
 		{
-			Node <T>*ptr = head;
+			if (ptr->value == value)
+			{
+				if (prePtr == nullptr)
+					head = head->next;
+				else
+					prePtr->next = ptr->next;
 
-			if (value == head->value){
-				pop_front();
+				delete ptr;
+				return;
 			}
-			else {
-				int i = before(value);
-				erase_after(i);
-			}
+			prePtr = ptr;
+			ptr = ptr->next;
 		}
-
 	}
+
+	//void remove(T val){
+	//	if (!is_empty())
+	//	{
+	//		Node <T>*ptr = head;
+
+	//		if (val == head->value){
+	//			pop_front();
+	//		}
+	//			//int i = before(value);
+	//			//erase_after(i);
+	//			//before(value);
+	//			while (!(ptr->value == val)){
+	//				ptr->next;
+	//				if (head -> value == val){
+	//					delete head;
+	//				}
+	//		}
+	//	}
+	//	
+	//}
 
 	void swap(forward_list &fl1){ //Byt plats på innehållet
 		Node<T>*n = head;

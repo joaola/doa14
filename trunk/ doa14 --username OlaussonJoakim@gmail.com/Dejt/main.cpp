@@ -7,111 +7,132 @@
 #include <sstream>
 
 using namespace std;
-
-//Jämför flickors intressen med pojkars intressen
-int compareInterests(Person girl, Person boy){
-	int sameInterests = 0;
-	for (int i = 0; i < girl.getInterest().length(); i++){
-		for (int j = 0; j < boy.getInterest().length(); j++){
-			if (girl.getInterest()[i] == boy.getInterest()[j]){
-				sameInterests++;
+namespace funk{
+	//Printa dubbellistan via två for-loopar
+	void printCouples(forward_list<forward_list<Person>> coupleList)
+	{
+		for (int i = 0; i < coupleList.length(); i++)
+		{
+			for (int j = 0; j < coupleList[i].length(); j++)
+			{
+				coupleList[i][j].print();
 			}
-
+			cout << endl;
 		}
 	}
-	return sameInterests;
-}
 
-//Skapar par
-void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
-	Person girl;
-	Person boy;
-	forward_list<Person> couples;
+	//Jämför flickors intressen med pojkars intressen
+	int compareInterests(Person girl, Person boy){
+		int sameInterests = 0;
+		for (int i = 0; i < girl.getInterest().length(); i++){
+			for (int j = 0; j < boy.getInterest().length(); j++){
+				if (girl.getInterest()[i] == boy.getInterest()[j]){
+					sameInterests++;
+				}
 
-	//Loopa flicklistan och pojklistan för att kunna jämföra intressen
-	for (int i = 0; i < girlList.length(); i++){
-		girl = girlList[i];
-		for (int j = 0; j < boyList.length(); j++){
-			boy = boyList[j];
-			//Få fram match
-			int minMutualInterest = 4;
-			int matchValue = compareInterests(boy, girl);
-			if (matchValue >= minMutualInterest){ 
+			}
+		}
+		return sameInterests;
+	}
+
+	//Skapar par
+	void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
+		Person girl;
+		Person boy;
+		forward_list<Person> couples;
+
+		//Loopa flicklistan och pojklistan för att kunna jämföra intressen
+		for (int i = 0; i < girlList.length(); i++){
+			int maxMutualInterest = 0;
+			int matchValue = 0;
+			girl = girlList[i];
+			for (int j = 0; j < boyList.length(); j++){
+				//Få fram match
+				matchValue = compareInterests(boyList[j], girlList[i]);
+				if (matchValue >= maxMutualInterest){
+					maxMutualInterest = matchValue;
+					boy = boyList[j];
+				}
+			}
+			if(maxMutualInterest>=4){
 				couples.push_front(boy);
 				couples.push_front(girl);
-				coupleList.push_front(couples);
-				girlList.remove(girl);
 				boyList.remove(boy);
-
+				girlList.remove(girl);
+				coupleList.push_front(couples);
 			}
-		}
-	}
-}
 
-//Läser in filerna i en forward_list
-void ReadFromFile(string fileName, forward_list<Person>& list){
-	string str;
-	ifstream fin;
-	fin.open(fileName);
-	if (!fin.good()){
-		cout << "Gick ej att öppna" << endl;
-		return;
-	}
-	while (getline(fin, str)){
-		istringstream iss(str);
-		string word;
-		iss >> word;
-		Person p1(word);
-		while (iss >> word){
-			p1.addInterest(word);
 		}
 
-		list.push_front(p1);
 	}
 
-	fin.close();
-}
+	//Läser in filerna i en forward_list
+	void ReadFromFile(string fileName, forward_list<Person>& list){
+		string str;
+		ifstream fin;
+		fin.open(fileName);
+		if (!fin.good()){
+			cout << "Gick ej att öppna" << endl;
+			return;
+		}
+		while (getline(fin, str)){
+			istringstream iss(str);
+			string word;
+			iss >> word;
+			Person p1(word);
+			while (iss >> word){
+				p1.addInterest(word);
+			}
 
-//Lägger till personer till personlistan
-void addToPeopleList(forward_list<Person> girlList, forward_list<Person>boyList, forward_list<Person>& peopleList){
-for (int i = 0; i < girlList.length(); i++){
-peopleList.push_front(girlList[i]);
-}
+			list.push_front(p1);
+		}
 
-for (int i = 0; i < boyList.length(); i++){
-peopleList.push_front(boyList[i]);
-}
-}
+		fin.close();
+	}
 
-//Test main-funktion
-void mainTest(){	
+	//Lägger till personer till personlistan
+	void addToPeopleList(forward_list<Person> girlList, forward_list<Person>boyList, forward_list<Person>& peopleList){
+		for (int i = 0; i < girlList.length(); i++){
+			peopleList.push_front(girlList[i]);
+		}
+
+		for (int i = 0; i < boyList.length(); i++){
+			peopleList.push_front(boyList[i]);
+		}
+	}
+
+	//Test main-funktion
+	void mainTest(){
+	}
 }
 
 int main(){
-	//4st forward lists
+	//forward lists
 	forward_list<Person>pojkLista;
 	forward_list<Person>flickLista;
 	forward_list<Person>personList;
+
+	//Forward_list i en forward_list
 	forward_list<forward_list<Person>> parLista;
 
 	//Läs filer
-	ReadFromFile("pojkfil.txt", pojkLista);
-	ReadFromFile("flickfil.txt", flickLista);
+	funk::ReadFromFile("pojkfil.txt", pojkLista);
+	funk::ReadFromFile("flickfil.txt", flickLista);
 
 	//Lägg till info från flick- och pojklistan till personlistan
-	addToPeopleList(flickLista, pojkLista, personList);
+	funk::addToPeopleList(flickLista, pojkLista, personList);
 	
 	//Skapa par
-	createCouple(flickLista, pojkLista, parLista);
+	funk::createCouple(flickLista, pojkLista, parLista);
 	//Printa personlistan
-	/*for (int i = 0; i < parLista.length(); i++){
-		parLista[i].PrintList();
-	}*/
-
-	/*for (int i = 0; i < personList.length(); i++)
-	{
+	cout << endl <<"PERSONLISTA: " << endl;
+	for (int i = 0; i < personList.length(); i++){
 		personList[i].print();
-	}*/
+	}
+
+	//Printa par
+	cout <<endl<< "PARLISTA: " << endl;
+	funk::printCouples(parLista);
 
 	system("PAUSE");
 	return 0;
