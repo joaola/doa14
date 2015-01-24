@@ -85,12 +85,12 @@ public:
 		while (ptr != nullptr)
 		{
 			if (ptr == head){
-				cout << "{";
+				cout << "[";
 			}
 			cout << ptr->value;
 			if (ptr->next == nullptr)
 			{
-				cout << "}";
+				cout << "]";
 			}
 			else
 				cout << ",";

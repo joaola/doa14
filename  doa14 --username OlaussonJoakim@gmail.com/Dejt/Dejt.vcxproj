@@ -81,8 +81,6 @@
     <ClCompile Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Couple.h" />
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\InterestTable.h" />
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Person.h" />
   </ItemGroup>
   <ItemGroup>
