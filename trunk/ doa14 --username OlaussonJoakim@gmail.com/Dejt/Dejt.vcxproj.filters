@@ -20,13 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Couple.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\Person.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ doa14 --username OlaussonJoakim%40gmail.com\Dejt\InterestTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

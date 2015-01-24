@@ -1,4 +1,3 @@
-#include "InterestTable.h"
 #include "Person.h"
 
 #include "string.h"
@@ -7,7 +6,7 @@
 #include <sstream>
 
 using namespace std;
-namespace funk{
+namespace date{
 	//Printa dubbellistan via två for-loopar
 	void printCouples(forward_list<forward_list<Person>> coupleList)
 	{
@@ -54,11 +53,11 @@ namespace funk{
 					boy = boyList[j];
 				}
 			}
-			if(maxMutualInterest>=4){
-				couples.push_front(boy);
-				couples.push_front(girl);
+			if(maxMutualInterest>=3){
 				boyList.remove(boy);
 				girlList.remove(girl);
+				couples.push_front(boy);
+				couples.push_front(girl);
 				coupleList.push_front(couples);
 			}
 
@@ -115,15 +114,34 @@ int main(){
 	//Forward_list i en forward_list
 	forward_list<forward_list<Person>> parLista;
 
+	//Cleara listorna innan användning
+	pojkLista.clear();
+	flickLista.clear();
+	personList.clear();
+	parLista.clear();
+
 	//Läs filer
-	funk::ReadFromFile("pojkfil.txt", pojkLista);
-	funk::ReadFromFile("flickfil.txt", flickLista);
+	date::ReadFromFile("pojkfil.txt", pojkLista);
+	date::ReadFromFile("flickfil.txt", flickLista);
 
 	//Lägg till info från flick- och pojklistan till personlistan
-	funk::addToPeopleList(flickLista, pojkLista, personList);
+	date::addToPeopleList(flickLista, pojkLista, personList);
 	
 	//Skapa par
-	funk::createCouple(flickLista, pojkLista, parLista);
+	date::createCouple(flickLista, pojkLista, parLista);
+
+	//Printa pojkar
+	cout << endl << "POJKAR: " << endl;
+	for (int i = 0; i < pojkLista.length(); i++){
+		pojkLista[i].print();
+	}
+
+	//Printa flickor
+	cout << endl << "FLICKOR: " << endl;
+	for (int i = 0; i < flickLista.length(); i++){
+		flickLista[i].print();
+	}
+
 	//Printa personlistan
 	cout << endl <<"PERSONLISTA: " << endl;
 	for (int i = 0; i < personList.length(); i++){
@@ -132,8 +150,7 @@ int main(){
 
 	//Printa par
 	cout <<endl<< "PARLISTA: " << endl;
-	funk::printCouples(parLista);
-
+	date::printCouples(parLista);
 	system("PAUSE");
 	return 0;
 }
