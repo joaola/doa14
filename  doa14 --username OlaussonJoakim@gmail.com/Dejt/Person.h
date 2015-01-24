@@ -3,7 +3,7 @@
 #include<iostream>
 #include <sstream>
 
-#include "InterestTable.h"
+#include "../forward_list_test/forward_list.h"
 using namespace std;
 
 class Person
@@ -35,34 +35,35 @@ public:
 			return false;
 	}
 	//Operatoröverlagring <<
-	friend ostream& operator<<(ostream& os, Person& p)
+	/*friend ostream& operator<<(ostream& os, Person& p)
 	{
 		os << p.name<<p.interests.PrintList();
 		return os;
-	}	
+	}*/
 
-	void setName(string name)
+	/*void setName(string name)
 	{
 		this->name = name;
-	}
+	}*/
 	
-	string getName()
+	/*string getName()
 	{
 		return name;
-	}
+	}*/
 
 	void print(){
 		cout << this->name<< endl;
-		cout<<this->interests.PrintList()<<endl;
+		interests.PrintList();
+		cout << endl;
 	}
 
 	void addInterest(string i)
 	{
-		this->interests.push_front(i);
+		interests.push_front(i);
 	}
 
 	forward_list<string> getInterest(){
-		return interests;
+		return this->interests;
 	}
 
 	~Person()
