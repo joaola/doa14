@@ -24,6 +24,7 @@ namespace date{
 	int compareInterests(Person girl, Person boy){
 		int sameInterests = 0;
 		for (int i = 0; i < girl.getInterest().length(); i++){
+			//sameInterests = 0;
 			for (int j = 0; j < boy.getInterest().length(); j++){
 				if (girl.getInterest()[i] == boy.getInterest()[j]){
 					sameInterests++;
@@ -35,30 +36,32 @@ namespace date{
 	}
 
 	//Skapar par
-	void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList){
+	void createCouple(forward_list<Person>&girlList, forward_list<Person>&boyList, forward_list<forward_list<Person>>&coupleList, int limit){
 		Person girl;
 		Person boy;
-		forward_list<Person> couples;
-
 		//Loopa flicklistan och pojklistan för att kunna jämföra intressen
 		for (int i = 0; i < girlList.length(); i++){
 			int maxMutualInterest = 0;
-			int matchValue = 0;
 			girl = girlList[i];
 			for (int j = 0; j < boyList.length(); j++){
+				int matchValue = 0;
 				//Få fram match
 				matchValue = compareInterests(boyList[j], girlList[i]);
 				if (matchValue >= maxMutualInterest){
 					maxMutualInterest = matchValue;
 					boy = boyList[j];
+					
 				}
+				
 			}
-			if(maxMutualInterest>=3){
-				boyList.remove(boy);
-				girlList.remove(girl);
+
+			if (maxMutualInterest >= limit){
+				forward_list<Person> couples;
 				couples.push_front(boy);
 				couples.push_front(girl);
 				coupleList.push_front(couples);
+				boyList.remove(boy);
+				girlList.remove(girl);
 			}
 
 		}
@@ -67,6 +70,7 @@ namespace date{
 
 	//Läser in filerna i en forward_list
 	void ReadFromFile(string fileName, forward_list<Person>& list){
+		list.clear();
 		string str;
 		ifstream fin;
 		fin.open(fileName);
@@ -94,7 +98,6 @@ namespace date{
 		for (int i = 0; i < girlList.length(); i++){
 			peopleList.push_front(girlList[i]);
 		}
-
 		for (int i = 0; i < boyList.length(); i++){
 			peopleList.push_front(boyList[i]);
 		}
@@ -128,7 +131,7 @@ int main(){
 	date::addToPeopleList(flickLista, pojkLista, personList);
 	
 	//Skapa par
-	date::createCouple(flickLista, pojkLista, parLista);
+	date::createCouple(flickLista, pojkLista, parLista, 4);
 
 	//Printa pojkar
 	cout << endl << "POJKAR: " << endl;
@@ -151,6 +154,8 @@ int main(){
 	//Printa par
 	cout <<endl<< "PARLISTA: " << endl;
 	date::printCouples(parLista);
+	
+
 	system("PAUSE");
 	return 0;
 }
