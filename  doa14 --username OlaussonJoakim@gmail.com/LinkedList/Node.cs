@@ -12,5 +12,15 @@ namespace LinkedList
     {
         public Node next;
         public Object data;
+
+        public Node()
+        {
+            
+        }
+
+        public Node(Object T)
+        {
+            this.data = T;
+        }
     }
 }

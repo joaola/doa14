@@ -10,25 +10,33 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-        //    Console.WriteLine("Add First:");
-        //    LinkedList myList1 = new LinkedList();
+            Console.WriteLine("Add First:");
+            LinkedList myList1 = new LinkedList();
 
-        //    myList1.AddFirst("Hello");
-        //    myList1.AddFirst("Magical");
-        //    myList1.AddFirst("World");
-        //    myList1.printAllNodes();
+            myList1.AddFirst("Tjabba");
+            myList1.AddFirst("Tjena");
+            myList1.AddFirst("Hallå");
+            myList1.printAllNodes();
 
-        //    Console.WriteLine();
+            Console.WriteLine();
 
-        //    Console.WriteLine("Add Last:");
-        //    LinkedList myList2 = new LinkedList();
+            Console.WriteLine("Add Last:");
+            LinkedList myList2 = new LinkedList();
 
-        //    myList2.AddLast("Hello");
-        //    myList2.AddLast("Magical");
-        //    myList2.AddLast("World");
-        //    myList2.printAllNodes();
+            myList2.AddLast("Yo");
+            myList2.AddLast("Walla");
+            myList2.AddLast("'sup");
+            myList2.printAllNodes();
 
-        //    Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("myList1.Contains('Tjena')?: ");
+            Console.WriteLine(myList2.Contains("Tjena"));
+
+            LinkedList myList3 = new LinkedList();
+
+
+
+            Console.ReadLine();
         }
     }
 }
