@@ -1,6 +1,7 @@
 ﻿using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
@@ -60,10 +61,24 @@ namespace LinkedList
             }
         }
 
+        //Kontrollerar om listan är tom
+        public bool isEmpty()
+        {
+            if (head == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         //Rensar listan
         public void Clear()
         {
-           
+            while (this.isEmpty()==true)
+            {
+                this.RemoveFirst();
+            }
+            return;
         }
 
         //Kollar om objektet finns i listan

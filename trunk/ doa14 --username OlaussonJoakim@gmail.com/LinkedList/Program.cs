@@ -13,28 +13,31 @@ namespace LinkedList
             Console.WriteLine("Add First:");
             LinkedList myList1 = new LinkedList();
 
+            //AddFirst & printAllNodes
             myList1.AddFirst("Tjabba");
             myList1.AddFirst("Tjena");
             myList1.AddFirst("Hallå");
             myList1.printAllNodes();
 
             Console.WriteLine();
-
             Console.WriteLine("Add Last:");
             LinkedList myList2 = new LinkedList();
 
-            myList2.AddLast("Yo");
-            myList2.AddLast("Walla");
-            myList2.AddLast("'sup");
+            //AddLast & printAllNodes
+            myList2.AddLast("Tjabba");
+            myList2.AddLast("Tjena");
+            myList2.AddLast("Hallå");
             myList2.printAllNodes();
 
+            //Contains
             Console.WriteLine();
-            Console.WriteLine("myList1.Contains('Tjena')?: ");
-            Console.WriteLine(myList2.Contains("Tjena"));
+            Console.WriteLine("myList2.Contains(\"Yo\"): ");
+            Console.WriteLine(myList2.Contains("Yo"));
 
-            LinkedList myList3 = new LinkedList();
-
-
+            //isEmpty
+            Console.WriteLine();
+            Console.WriteLine("myList.isEmpty(): ");
+            Console.WriteLine(myList2.isEmpty());
 
             Console.ReadLine();
         }
