@@ -10,7 +10,7 @@ namespace LinkedList
 {
     public class Node
     {
-        public Node next;
+        public Node next, prev;
         public Object data;
 
         public Node()
