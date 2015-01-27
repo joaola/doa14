@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -12,6 +13,7 @@ namespace LinkedList
     {
         private Node head;
 
+        //Printar alla noder
         public void printAllNodes()
         {
             Node current = head;
@@ -22,29 +24,31 @@ namespace LinkedList
             }
         }
 
-        public void AddFirst(Object data)
+        //Lägger till ett objekt först i listan
+        public void AddFirst(Object T)
         {
             Node toAdd = new Node();
 
-            toAdd.data = data;
+            toAdd.data = T;
             toAdd.next = head;
 
             head = toAdd;
         }
 
-        public void AddLast(Object data)
+        //Lägger till ett objekt sist i listan
+        public void AddLast(Object T)
         {
             if (head == null)
             {
                 head = new Node();
 
-                head.data = data;
+                head.data = T;
                 head.next = null;
             }
             else
             {
                 Node toAdd = new Node();
-                toAdd.data = data;
+                toAdd.data = T;
 
                 Node current = head;
                 while (current.next != null)
@@ -56,14 +60,26 @@ namespace LinkedList
             }
         }
 
+        //Rensar listan
         public void Clear()
         {
-            
+           
         }
 
-        public bool Contains(Object data)
+        //Kollar om objektet finns i listan
+        public bool Contains(Object T)
         {
-            return true;
+            Node n = this.head;
+            while(n != null)
+            {
+                Object d = n.data;
+                if (d.Equals(T) == true)
+                {
+                    return true;
+                }
+                n = n.next;
+            }
+            return false;
         }
 
         public void Find()
