@@ -17,7 +17,7 @@ namespace LinkedList
             myList1.AddFirst("Tjabba");
             myList1.AddFirst("Tjena");
             myList1.AddFirst("Hallå");
-            myList1.printAllNodes();
+            myList1.printAll();
 
             Console.WriteLine();
             Console.WriteLine("Add Last:");
@@ -27,7 +27,7 @@ namespace LinkedList
             myList2.AddLast("Tjabba");
             myList2.AddLast("Tjena");
             myList2.AddLast("Hallå");
-            myList2.printAllNodes();
+            myList2.printAll();
 
             //Contains
             Console.WriteLine();
@@ -36,8 +36,25 @@ namespace LinkedList
 
             //isEmpty
             Console.WriteLine();
-            Console.WriteLine("myList.isEmpty(): ");
+            Console.WriteLine("myList2.isEmpty(): ");
             Console.WriteLine(myList2.isEmpty());
+
+            //Clear & isEmpty
+            Console.WriteLine();
+            Console.WriteLine("myList2.clear() == empty?: ");
+            myList2.Clear();
+            Console.WriteLine(myList2.isEmpty());
+            
+            //RemoveFirst, printAll & RemoveLast
+            Console.WriteLine();
+            Console.WriteLine("myList1.RemoveFirst & myList1.RemoveLast");
+            myList1.RemoveFirst();
+            myList1.RemoveLast();
+            myList1.printAll();
+
+
+            Console.WriteLine();
+            
 
             Console.ReadLine();
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Globalization;
@@ -10,12 +11,35 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
+    //Dubbellänkade list-klassen
     public class LinkedList
     {
         private Node head;
 
+        public Object this[int i]
+        {
+            get
+            {
+                Node n = this.head;
+                for (int j = 0; j < i; j++)
+                {
+                    n = n.next;
+                }
+                return n.data;
+            }
+            set
+            {
+                Node n = this.head;
+                for (int j = 0; j< i; j++)
+                {
+                    n = n.next;
+                }
+                n.data = value;
+            }
+        }
+
         //Printar alla noder
-        public void printAllNodes()
+        public void printAll()
         {
             Node current = head;
             while (current != null)
@@ -28,12 +52,10 @@ namespace LinkedList
         //Lägger till ett objekt först i listan
         public void AddFirst(Object T)
         {
-            Node toAdd = new Node();
-
-            toAdd.data = T;
-            toAdd.next = head;
-
-            head = toAdd;
+            Node n = new Node();
+            n.data = T;
+            n.next = head;
+            head = n;
         }
 
         //Lägger till ett objekt sist i listan
@@ -42,39 +64,32 @@ namespace LinkedList
             if (head == null)
             {
                 head = new Node();
-
                 head.data = T;
                 head.next = null;
             }
             else
             {
-                Node toAdd = new Node();
-                toAdd.data = T;
-
+                Node n = new Node();
+                n.data = T;
                 Node current = head;
                 while (current.next != null)
                 {
                     current = current.next;
                 }
-
-                current.next = toAdd;
+                current.next = n;
             }
         }
 
         //Kontrollerar om listan är tom
         public bool isEmpty()
         {
-            if (head == null)
-            {
-                return true;
-            }
-            return false;
+            return head == null;
         }
 
         //Rensar listan
         public void Clear()
         {
-            while (this.isEmpty()==true)
+            while (!this.isEmpty())
             {
                 this.RemoveFirst();
             }
@@ -97,24 +112,52 @@ namespace LinkedList
             return false;
         }
 
-        public void Find()
+        //Hittar ett element
+        public Node Find(Object T)
         {
-            
+            Node n = head;
+            while (n != null)
+            {
+                if (n.data.Equals(T))
+                {
+                    return n;
+                }
+                n = n.next;
+            }
+            return null;
         }
 
-        public void Remove()
+        //Tar bort ett element
+        /*GÖRA KLART SENARE!!*/
+        public void Remove(Object T)
         {
-            
         }
 
+        //Tar bort första elementet
         public void RemoveFirst()
         {
-            
+            Node n = head;
+            if (head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                n.next.prev = null;
+                head = head.next;
+            }
         }
 
-        public void RemoveLast()
+        //Tar bort sista elementet
+        /*GÖRA KLART SENARE!!*/
+        public void RemoveLast() 
         {
-            
+            Node n = head;
+            while (n.next != null)
+            {
+                n = n.next;
+            }
+            Remove(n);
         }
     }
 }
