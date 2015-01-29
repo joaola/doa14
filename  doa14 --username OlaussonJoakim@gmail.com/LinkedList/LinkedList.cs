@@ -131,6 +131,7 @@ namespace LinkedList
         /*GÖRA KLART SENARE!!*/
         public void Remove(Object T)
         {
+            Node n = Find(T);
         }
 
         //Tar bort första elementet
@@ -150,14 +151,34 @@ namespace LinkedList
 
         //Tar bort sista elementet
         /*GÖRA KLART SENARE!!*/
-        public void RemoveLast() 
+        public object RemoveLast()
         {
-            Node n = head;
-            while (n.next != null)
+            if (!this.isEmpty())
             {
-                n = n.next;
+                //Sista elementet
+                Node temp = this.head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                Node n = temp;
+                object data = n.data;
+                /*-----------------*/
+                if (n == this.head)
+                {
+                    this.head = null;
+                }
+                else
+                {
+                    n.prev.next = null;
+                    n.prev = null; 
+                }
+                return data;
             }
-            Remove(n);
+            else
+            {
+                return new object();
+            }
         }
     }
 }
