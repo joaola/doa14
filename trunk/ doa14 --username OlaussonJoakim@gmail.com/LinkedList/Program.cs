@@ -49,7 +49,7 @@ namespace LinkedList
             Console.WriteLine();
             Console.WriteLine("myList1.RemoveFirst & myList1.RemoveLast");
             myList1.RemoveFirst();
-            myList1.RemoveLast();
+            //myList1.RemoveLast();
             myList1.printAll();
 
 
