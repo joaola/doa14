@@ -15,27 +15,49 @@ namespace LinkedList
     public class LinkedList
     {
         private Node head;
+        private Node tail;
+        //public Object this[int i]
+        //{
+        //    get
+        //    {
+        //        Node n = this.head;
+        //        for (int j = 0; j < i; j++)
+        //        {
+        //            n = n.next;
+        //        }
+        //        return n.data;
+        //    }
+        //    set
+        //    {
+        //        Node n = this.head;
+        //        for (int j = 0; j < i; j++)
+        //        {
+        //            n = n.next;
+        //        }
+        //        n.data = value;
+        //    }
+        //}
 
-        public Object this[int i]
+        //Första objektet i listan
+        public Node First()
         {
-            get
+            if (head == null)
             {
-                Node n = this.head;
-                for (int j = 0; j < i; j++)
-                {
-                    n = n.next;
-                }
-                return n.data;
+                throw new Exception("Listanär tom");
             }
-            set
+            else
+                return this.head;
+        }
+
+        //Sista objektet i listan
+        public Node Last()
+        {
+            Node n = this.head;
+            while (n.next != null)
             {
-                Node n = this.head;
-                for (int j = 0; j< i; j++)
-                {
-                    n = n.next;
-                }
-                n.data = value;
+                n = n.next;
             }
+            return n;
         }
 
         //Printar alla noder
@@ -100,7 +122,7 @@ namespace LinkedList
         public bool Contains(Object T)
         {
             Node n = this.head;
-            while(n != null)
+            while (n != null)
             {
                 Object d = n.data;
                 if (d.Equals(T) == true)
@@ -133,7 +155,6 @@ namespace LinkedList
         {
             Node n = Find(T);
         }
-
         //Tar bort första elementet
         public void RemoveFirst()
         {
@@ -148,36 +169,20 @@ namespace LinkedList
                 head = head.next;
             }
         }
-
         //Tar bort sista elementet
         /*GÖRA KLART SENARE!!*/
-        public object RemoveLast()
+        public void RemoveLast()
         {
-            if (!this.isEmpty())
+            if (head == null)
             {
-                //Sista elementet
-                Node temp = this.head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                Node n = temp;
-                object data = n.data;
-                /*-----------------*/
-                if (n == this.head)
-                {
-                    this.head = null;
-                }
-                else
-                {
-                    n.prev.next = null;
-                    n.prev = null; 
-                }
-                return data;
+                throw new Exception("Listan är tom");
             }
+            tail = tail.prev;
+            if (tail == null)
+                head = null;
             else
             {
-                return new object();
+                tail.next = null;
             }
         }
     }
