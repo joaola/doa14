@@ -23,7 +23,7 @@ namespace LinkedList
                 throw new Exception("Listan är tom");
             }
             else
-                return this.head;
+                return head;
         }
 
         //Sista objektet i listan
