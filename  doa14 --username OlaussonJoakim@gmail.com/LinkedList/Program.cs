@@ -45,16 +45,23 @@ namespace LinkedList
             myList2.Clear();
             Console.WriteLine(myList2.isEmpty());
             
-            //RemoveFirst, printAll & RemoveLast
+            //RemoveFirst
             Console.WriteLine();
-            Console.WriteLine("myList1.RemoveFirst & myList1.RemoveLast");
+            Console.WriteLine("myList1.RemoveFirst");
             myList1.RemoveFirst();
+            myList1.printAll();
+
+            //RemoveLast 
+            Console.WriteLine();
+            Console.WriteLine("myList1.RemoveLast");
             myList1.RemoveLast();
             myList1.printAll();
 
-
+            //Remove
             Console.WriteLine();
-            
+            Console.WriteLine("myList1.Remove()");
+            myList1.Remove("Tjena");
+            myList1.printAll();
 
             Console.ReadLine();
         }

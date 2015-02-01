@@ -6,7 +6,6 @@ using System.Runtime.Remoting.Messaging;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace LinkedList
 {
     //Nodklassen
@@ -15,13 +14,11 @@ namespace LinkedList
         public Node next;
         public Node prev;
         public Object data;
-        
         //Konstruktor
         public Node()
         {
             next = prev = null;
         }
-
         //Konstruktor
         public Node(Object T)
         {
@@ -29,8 +26,6 @@ namespace LinkedList
         }
         ~Node()
         {
-
         }
     }
-
 }
