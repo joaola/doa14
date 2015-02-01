@@ -4,3 +4,5 @@ C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\bi
 C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\obj\Release\LinkedList.exe
 C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\obj\Release\LinkedList.pdb
 C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\obj\Release\LinkedList.csprojResolveAssemblyReference.cache
+C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\bin\Release\nunit.framework.dll
+C:\Users\Joakim\Desktop\ doa14 --username OlaussonJoakim@gmail.com\LinkedList\bin\Release\nunit.framework.xml
